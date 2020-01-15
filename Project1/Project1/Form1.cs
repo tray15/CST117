@@ -10,12 +10,19 @@ namespace Project1
             InitializeComponent();
         }
 
-        string input;
-        double mm;
-
         private void button1_Click(object sender, EventArgs e)
         {
-            label3.Text = string.Format("{0:0.000}", Double.Parse(textBox1.Text) / 25.4);
+            if (string.IsNullOrWhiteSpace(textBox1.Text))
+                return;
+
+            try
+            {
+                label3.Text = string.Format("{0:0.000}", Double.Parse(textBox1.Text) / 25.4);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -28,6 +35,10 @@ namespace Project1
 
         }
 
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
     class Test
