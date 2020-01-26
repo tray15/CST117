@@ -157,7 +157,6 @@
             this.l_color.Size = new System.Drawing.Size(35, 13);
             this.l_color.TabIndex = 8;
             this.l_color.Text = "label3";
-            this.l_color.Click += new System.EventHandler(this.label3_Click);
             // 
             // b_show
             // 

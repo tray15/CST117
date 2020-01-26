@@ -15,17 +15,14 @@ namespace ProgrammingProject2
         public Form1()
         {
             InitializeComponent();
+            l_name.Visible = false;
+            l_color.Visible = false;
             pb_circle_blue.Visible = false;
             pb_circle_red.Visible = false;
             pb_square_blue.Visible = false;
             pb_square_red.Visible = false;
             pb_triangle_blue.Visible = false;
             pb_triangle_red.Visible = false;
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void Form1_Load(object sender, EventArgs e)
