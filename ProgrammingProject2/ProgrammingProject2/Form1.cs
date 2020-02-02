@@ -31,24 +31,11 @@ namespace ProgrammingProject2
         }
         private void b_show_Click(object sender, EventArgs e)
         {
-            string shapeName;
             if (cb_name.Checked) {
                 l_name.Visible = true;
                 if (lb_shape.SelectedIndex != -1)
                 {
-                    shapeName = lb_shape.SelectedItem.ToString();
-                    switch (shapeName)
-                    {
-                        case "Circle":
-                            l_name.Text = "Circle";
-                            break;
-                        case "Square":
-                            l_name.Text = "Square";
-                            break;
-                        case "Triangle":
-                            l_name.Text = "Triangle";
-                            break;
-                    }
+                    l_name.Text = lb_shape.SelectedItem.ToString();
                 }
             } else
             {
@@ -71,59 +58,20 @@ namespace ProgrammingProject2
             {
                 l_color.Visible = false;
             }
-            if (lb_shape.SelectedIndex == 0 && rb_blue.Checked)
+            if (lb_shape.SelectedIndex == 0)
             {
-                pb_circle_blue.Visible = true;
-                pb_circle_red.Visible = false;
-                pb_square_blue.Visible = false;
-                pb_square_red.Visible = false;
-                pb_triangle_blue.Visible = false;
-                pb_triangle_red.Visible = false;
+                pb_circle_blue.Visible = rb_blue.Checked;
+                pb_circle_red.Visible = rb_red.Checked;
             }
-            if (lb_shape.SelectedIndex == 0 && rb_red.Checked)
+            else if (lb_shape.SelectedIndex == 1)
             {
-                pb_circle_blue.Visible = false;
-                pb_circle_red.Visible = true;
-                pb_square_blue.Visible = false;
-                pb_square_red.Visible = false;
-                pb_triangle_blue.Visible = false;
-                pb_triangle_red.Visible = false;
+                pb_square_blue.Visible = rb_blue.Checked;
+                pb_square_red.Visible = rb_red.Checked;
             }
-            if (lb_shape.SelectedIndex == 1 && rb_blue.Checked)
+            else if (lb_shape.SelectedIndex == 2)
             {
-                pb_circle_blue.Visible = false;
-                pb_circle_red.Visible = false;
-                pb_square_blue.Visible = true;
-                pb_square_red.Visible = false;
-                pb_triangle_blue.Visible = false;
-                pb_triangle_red.Visible = false;
-            }
-            if (lb_shape.SelectedIndex == 1 && rb_red.Checked)
-            {
-                pb_circle_blue.Visible = false;
-                pb_circle_red.Visible = false;
-                pb_square_blue.Visible = false;
-                pb_square_red.Visible = true;
-                pb_triangle_blue.Visible = false;
-                pb_triangle_red.Visible = false;
-            }
-            if (lb_shape.SelectedIndex == 2 && rb_blue.Checked)
-            {
-                pb_circle_blue.Visible = false;
-                pb_circle_red.Visible = false;
-                pb_square_blue.Visible = false;
-                pb_square_red.Visible = false;
-                pb_triangle_blue.Visible = true;
-                pb_triangle_red.Visible = false;
-            }
-            if (lb_shape.SelectedIndex == 2 && rb_red.Checked)
-            {
-                pb_circle_blue.Visible = false;
-                pb_circle_red.Visible = false;
-                pb_square_blue.Visible = false;
-                pb_square_red.Visible = false;
-                pb_triangle_blue.Visible = false;
-                pb_triangle_red.Visible = true;
+                pb_triangle_blue.Visible = rb_blue.Checked;
+                pb_triangle_red.Visible = rb_red.Checked;
             }
         }
     }
