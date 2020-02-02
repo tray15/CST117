@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.label1 = new System.Windows.Forms.Label();
             this.tb_userNumber = new System.Windows.Forms.TextBox();
             this.l_answer = new System.Windows.Forms.Label();
@@ -89,6 +90,7 @@
             this.Controls.Add(this.l_answer);
             this.Controls.Add(this.tb_userNumber);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Approximate PI";
             this.ResumeLayout(false);
