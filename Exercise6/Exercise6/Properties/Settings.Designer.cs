@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace InventoryApp.Properties
+namespace Exercise6.Properties
 {
 
 

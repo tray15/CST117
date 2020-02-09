@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CST117 Milestone", "WindowsFormsApp1\CST117 Milestone.csproj", "{332F0C10-7682-4B19-BC5B-DCEDBD68549D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventoryItemTest", "InventoryItemTest\InventoryItemTest.csproj", "{67B19309-936F-4844-AC0F-8E5DB839E1F9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{332F0C10-7682-4B19-BC5B-DCEDBD68549D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{332F0C10-7682-4B19-BC5B-DCEDBD68549D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{332F0C10-7682-4B19-BC5B-DCEDBD68549D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{332F0C10-7682-4B19-BC5B-DCEDBD68549D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67B19309-936F-4844-AC0F-8E5DB839E1F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67B19309-936F-4844-AC0F-8E5DB839E1F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67B19309-936F-4844-AC0F-8E5DB839E1F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67B19309-936F-4844-AC0F-8E5DB839E1F9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {25C23C5C-FCEC-445D-B3AD-5AE6A6B7E004}
+	EndGlobalSection
+EndGlobal

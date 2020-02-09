@@ -4,11 +4,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace InventoryApp
+namespace Exercise6
 {
     static class Program
     {
-        public static Form1 form1;
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -17,9 +16,7 @@ namespace InventoryApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(form1 = new Form1());
-
-
+            Application.Run(new Form1());
         }
     }
 }
