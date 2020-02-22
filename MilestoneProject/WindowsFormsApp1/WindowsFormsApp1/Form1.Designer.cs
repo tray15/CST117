@@ -37,6 +37,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // listView1
@@ -45,7 +46,8 @@
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3,
-            this.columnHeader4});
+            this.columnHeader4,
+            this.columnHeader5});
             this.listView1.GridLines = true;
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(108, 37);
@@ -63,17 +65,17 @@
             // columnHeader2
             // 
             this.columnHeader2.Text = "Price";
-            this.columnHeader2.Width = 146;
+            this.columnHeader2.Width = 86;
             // 
             // columnHeader3
             // 
             this.columnHeader3.Text = "Quantity";
-            this.columnHeader3.Width = 154;
+            this.columnHeader3.Width = 70;
             // 
             // columnHeader4
             // 
-            this.columnHeader4.Text = "Description";
-            this.columnHeader4.Width = 605;
+            this.columnHeader4.Text = "Par";
+            this.columnHeader4.Width = 63;
             // 
             // button1
             // 
@@ -111,6 +113,11 @@
             this.button3.Text = "Search";
             this.button3.UseVisualStyleBackColor = true;
             // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Description";
+            this.columnHeader5.Width = 433;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -139,6 +146,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
     }
 }
 

@@ -39,7 +39,7 @@ namespace InventoryApp
 
         public void addToList(InventoryItem item)
         {
-            listView1.Items.Add(new ListViewItem(new string[] {item.Name, Convert.ToString(item.Price), Convert.ToString(item.Quantity), item.Description} ));
+            listView1.Items.Add(new ListViewItem(new string[] {item.Name, Convert.ToString(item.Price), Convert.ToString(item.Quantity), item.Par.ToString(), item.Description} ));
         }
     }
 }
