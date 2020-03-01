@@ -4,19 +4,11 @@ namespace InventoryApp
 {
     public class InventoryItem
     {
-
-        private string name;
-        private decimal price;
-        private int quantity;
-        private int par;
-        private string description;
-
         public string Name { get; set; }
         public decimal Price { get; set; }
         public int Quantity { get; set; }
         public int Par { get; set; }
         public string Description { get; set; }
-
 
         /*
          * create an item in inventory
@@ -31,7 +23,7 @@ namespace InventoryApp
         }
 
         public override string ToString() {
-            return string.Format(string.Format("Item Name: {0}, Price: {1}, Quantity: {2}, Par: {3}, Description: {4}", Name, Price, Quantity, Par, Description));
+            return string.Format(string.Format("{0} {1} {2} {3} {4}", Name, Price, Quantity, Par, Description));
         }
 
     }

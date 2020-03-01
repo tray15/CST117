@@ -15,7 +15,12 @@ namespace InventoryApp
         [STAThread]
         static void Main()
         {
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(form1 = new Form1());
 
+            //Console testing methods
+            /*
             Console.WriteLine("Test");
             InventoryManager im = new InventoryManager();
             InventoryItem i1 = new InventoryItem("item1", 120.00m, 30, 100, "item1 Test");
@@ -43,10 +48,7 @@ namespace InventoryApp
             im.quantitySearch(35);
             im.restock(i1);
             im.restock(i4);
-
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(form1 = new Form1());
+            */
 
         }
     }

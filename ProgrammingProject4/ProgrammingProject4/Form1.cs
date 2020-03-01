@@ -22,15 +22,15 @@ namespace ProgrammingProject4
             var board = new int[3, 3];
             var labels = new Label[9]
             {
-                label1, //  [0,0]
-                label2, //  [0,1]
-                label3, //  [0,2]
-                label4, //  [1,0]
-                label5, //  [1,1]
-                label6, //  [1,2]
-                label7, //  [2,0]
-                label8, //  [2,1]
-                label9  //  [2,2]
+                label1, //  [0,0] upper left
+                label2, //  [0,1] upper mid
+                label3, //  [0,2] upper right
+                label4, //  [1,0] mid left
+                label5, //  [1,1] mid mid
+                label6, //  [1,2] mid right
+                label7, //  [2,0] lower left
+                label8, //  [2,1] lower mid
+                label9  //  [2,2] lower right
             };
             int labelsIndex = 0;
 

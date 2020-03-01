@@ -3,38 +3,55 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace InventoryApp
 {
     class InventoryManager
     {
-        private InventoryItem[] m_CurrentInventory;
+        //private InventoryItem[] m_CurrentInventory;
+        private List<InventoryItem> m_CurrentInventory = new List<InventoryItem>();
 
         public InventoryManager()
         {
-            this.m_CurrentInventory = new InventoryItem[0];
+            //this.m_CurrentInventory = new InventoryItem[0];
+            this.m_CurrentInventory = new List<InventoryItem>();
+
         }
 
         public void AddItem(InventoryItem item)
         {
+            /*
             // check to see if the inventory already contains an item with that name
             if (this.m_CurrentInventory.Any(x => x.Name == item.Name))
                 return;
 
-            // resize array
+             resize array
             Array.Resize(ref this.m_CurrentInventory, this.m_CurrentInventory.Length + 1);
 
             this.m_CurrentInventory[this.m_CurrentInventory.Length - 1] = item;
+            */
+            if (this.m_CurrentInventory.Any(x => x.Name == item.Name))
+                return;
+            this.m_CurrentInventory.Add(item);
+        }
+        public void editItem(int oldIndex, InventoryItem item)
+        {
+            this.m_CurrentInventory[oldIndex] = item;
         }
         public void RemoveItem(InventoryItem item)
         {
+            /*
             var index = Array.IndexOf(this.m_CurrentInventory, item);
             if (index < 0)
-                return;
+                //return;
 
             this.m_CurrentInventory[index] = null;
 
             this.m_CurrentInventory = this.m_CurrentInventory.Where((source, idx) => idx != index).ToArray();
+            */
+            this.m_CurrentInventory.Remove(item);
+
         }
         public void restock(InventoryItem item)
         {
@@ -42,46 +59,50 @@ namespace InventoryApp
             {
                 int temp = item.Quantity;
                 item.Quantity += item.Par - temp;
-                Console.WriteLine(item.Quantity);
-            } else if (item.Quantity <= item.Par)
+                //Console.WriteLine(item.Quantity);
+            } else if (item.Quantity >= item.Par)
             {
-                Console.WriteLine("Stock is maxed. Order not placed.");
+                string message = item.Name + " stock is maxed. Order not placed.";
+                string title = "Error";
+                MessageBox.Show(message, title);
+                //Console.WriteLine("Stock is maxed. Order not placed.");
             }
         }
         public void displayItems()
-        {
+        { 
             foreach (var item in this.m_CurrentInventory)
             {
                 Console.WriteLine(item.ToString());
             }
         }
-        public void nameSearch(String name)
+        public List<InventoryItem> getInventoryList()
         {
-            bool foundName = false;
-            var search = this.m_CurrentInventory.Where(i => i.Name.Contains(name));
-            foreach (var result in search)
-            {
-                Console.WriteLine("Items with name " + name + " found: {0}", result);
-                foundName = true;
-            } 
-            if (foundName == false)
-            {
-                Console.WriteLine("No items found with name: " + name + ".");
-            }
+            return this.m_CurrentInventory;
         }
-        public void quantitySearch(int quantity)
+        public InventoryItem ItemLookUp(string name, decimal price, int quantity, int par, string description)
         {
-            bool foundItem = false;
-            var search = this.m_CurrentInventory.Where(i => i.Quantity.ToString().Contains(quantity.ToString()));
-            foreach (var result in search)
+            foreach (var item in m_CurrentInventory)
             {
-                Console.WriteLine("Items with quantity " + quantity + "  found: {0}", result);
-                foundItem = true;
+                if (item.Name == name && item.Price == price && item.Quantity == quantity && item.Par == par && item.Description == description)
+                {
+                    return item;
+                }
             }
-            if (foundItem == false)
+            return null;
+        }
+        public List<InventoryItem> search(string itemName, int quantity = 0)
+        {
+            var results = this.m_CurrentInventory.Where(x => x.Name.ToLower().Contains(itemName.ToLower()));
+            if (quantity != 0)
             {
-                Console.WriteLine("No items found with quantity of " + quantity + ".");
+                results = results.Union(this.m_CurrentInventory.Where(x => x.Quantity.Equals(quantity)));
             }
+
+            return results.ToList();
+        }
+        public int getIndex(InventoryItem item)
+        {
+            return this.m_CurrentInventory.IndexOf(item);
         }
     }
 }
